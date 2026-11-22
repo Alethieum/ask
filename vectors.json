@@ -1,0 +1,59 @@
+{
+  "about": "ASK test vectors for the Ando Infer instance. The keys are Foundry's published development accounts 0 and 1, which are public test values: never fund them.",
+  "accounts": {
+    "0": {
+      "private_key": "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80",
+      "address": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+    },
+    "1": {
+      "private_key": "0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d",
+      "address": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+    }
+  },
+  "vectors": [
+    {
+      "name": "key, EIP-55 wallet",
+      "wallet": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+      "made": "20261122T090000Z",
+      "sentence": "Ando Infer API key for wallet 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266, made 20261122T090000Z. Anyone with this signature can spend the Ando Infer balance of this wallet. Send it only to infer.andoai.xyz.",
+      "eip191_digest": "0xeb46ded17bd38e1e503cc606cf91fa6b93f4b7bd0d4ad3b7f9ab4b3634702a49",
+      "signature": "0x13750384133b705c9507134c9c8bae48bfc934ccb77d43ecc2cfa88113dcea0162ec04a0e5e287ab26f948b11db9eca78e1e73d2ce2d8645029f5a501f4b293a1c",
+      "ask": "ando_0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266_20261122T090000Z_0x13750384133b705c9507134c9c8bae48bfc934ccb77d43ecc2cfa88113dcea0162ec04a0e5e287ab26f948b11db9eca78e1e73d2ce2d8645029f5a501f4b293a1c",
+      "valid": true
+    },
+    {
+      "name": "key, lowercase wallet (the sentence uses the wallet exactly as written)",
+      "wallet": "0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266",
+      "made": "20261122T090000Z",
+      "sentence": "Ando Infer API key for wallet 0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266, made 20261122T090000Z. Anyone with this signature can spend the Ando Infer balance of this wallet. Send it only to infer.andoai.xyz.",
+      "eip191_digest": "0x1a3e6574fc43a67bc13e2a6451940b16b711bddc7ad077a2a47e1d51ea99cdb2",
+      "signature": "0x600415f7f57821890c2958d6a5f6685269b3ffa78186db9924e97c42ccbec66d114807ce8f6c8fcf01f7d2f8b5d4256de3207cbd70bfbe1452ebe8571b94ef061c",
+      "ask": "ando_0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266_20261122T090000Z_0x600415f7f57821890c2958d6a5f6685269b3ffa78186db9924e97c42ccbec66d114807ce8f6c8fcf01f7d2f8b5d4256de3207cbd70bfbe1452ebe8571b94ef061c",
+      "valid": true
+    },
+    {
+      "name": "move of account 0 to account 1",
+      "from": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+      "to": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+      "made": "20261122T090500Z",
+      "move_sentence": "Ando Infer move of wallet 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266 to wallet 0x70997970C51812dc3A010C7d01b50e0d17dc79C8, made 20261122T090500Z. This gives wallet 0x70997970C51812dc3A010C7d01b50e0d17dc79C8 the Ando Infer balance and history of wallet 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266, for good. Send it only to infer.andoai.xyz.",
+      "move_digest": "0xf99542942cc063b25900154cf344e7f160d1f47bc070c50d5952d0caf1b08487",
+      "move_signature": "0x520e93c63ac7ed698ef7af0c82b9bd4867bd80bf2a9271aa00ef2e12d176856141f44a5f344c6e1b2ef9010d0a0622e5ff46c3da4d7fb7e461816530ed1bd55c1b",
+      "key_sentence": "Ando Infer API key for wallet 0x70997970C51812dc3A010C7d01b50e0d17dc79C8, made 20261122T090500Z. Anyone with this signature can spend the Ando Infer balance of this wallet. Send it only to infer.andoai.xyz.",
+      "key_digest": "0xb0c48ea395226d6fa674208cd211a7690d376656701c5310cbc11a93d09377db",
+      "key_signature": "0x89d8c742266ba30165c2bdab833ea39f6a493cf9dffbc0682817ac08753e8c960a1119c553f64fb352e573ab3c0401a2d8a3c09d013037eeb5ef0e5757f1e5b51b",
+      "ask": "ando_0x70997970C51812dc3A010C7d01b50e0d17dc79C8_20261122T090500Z_0x89d8c742266ba30165c2bdab833ea39f6a493cf9dffbc0682817ac08753e8c960a1119c553f64fb352e573ab3c0401a2d8a3c09d013037eeb5ef0e5757f1e5b51b_0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266_0x520e93c63ac7ed698ef7af0c82b9bd4867bd80bf2a9271aa00ef2e12d176856141f44a5f344c6e1b2ef9010d0a0622e5ff46c3da4d7fb7e461816530ed1bd55c1b",
+      "valid": true
+    },
+    {
+      "name": "wrong signature: the last byte of vector 1 changed",
+      "ask": "ando_0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266_20261122T090000Z_0x13750384133b705c9507134c9c8bae48bfc934ccb77d43ecc2cfa88113dcea0162ec04a0e5e287ab26f948b11db9eca78e1e73d2ce2d8645029f5a501f4b293a1b",
+      "valid": false
+    },
+    {
+      "name": "made in the future (more than 60 s after the seller's clock)",
+      "ask_shape": "ando_{W}_{T}_{S} with T later than now + 60 s",
+      "valid": false
+    }
+  ]
+}
